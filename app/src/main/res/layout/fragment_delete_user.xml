@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/gradient_black_background"
+    android:background="?attr/colorSecondary"
     android:orientation="vertical"
     android:padding="5dp"
     tools:context=".DeleteUserFragment">
@@ -25,6 +25,7 @@
     <TextView
         android:id="@+id/textView8"
         style="@style/toolbar_title"
+        android:textSize="20sp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/delete"

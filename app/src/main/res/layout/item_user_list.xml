@@ -8,6 +8,7 @@
     android:layout_marginBottom="8dp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardUser"
         style="@style/cancel_cv"
         android:layout_margin="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

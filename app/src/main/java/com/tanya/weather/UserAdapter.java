@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull UserAdapter.ViewHolder holder, int position) {
-        UserModal userModal = modals.get(position);
+        final UserModal userModal = modals.get(position);
         holder.setIsRecyclable(false);
         try {
             holder.bind(position, userModal, listener);
@@ -53,15 +54,22 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView fullNameTxt, emailTxt;
-
+        CardView mainCardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             fullNameTxt = (TextView) itemView.findViewById(R.id.textView6);
             emailTxt = (TextView) itemView.findViewById(R.id.textView7);
+            mainCardView = (CardView) itemView.findViewById(R.id.cardUser);
         }
 
         public void bind(final int pos, final UserModal modal, final UserAdapter.OnItemClickListener listener) {
             itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(pos, modal, v);
+                }
+            });
+            mainCardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     listener.onItemClick(pos, modal, v);

@@ -10,12 +10,16 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
-
-// TextDialogFragment dialogFragment = new TextDialogFragment();
-//    dialogFragment.show(getSupportFragmentManager(), "TextDialogFragment");
 public class DeleteUserFragment extends DialogFragment {
     CardView cancelCv, deleteCv;
     private DialogListener dialogListener;
+    int adapterPosition;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        adapterPosition = getArguments().getInt("adapterPosition");
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -33,7 +37,7 @@ public class DeleteUserFragment extends DialogFragment {
             public void onClick(View view) {
 
                 if (dialogListener != null) {
-                    dialogListener.onDeleted(true);
+                    dialogListener.onDeleted(true, adapterPosition);
                 }
                 dismiss();
             }
@@ -69,6 +73,6 @@ public class DeleteUserFragment extends DialogFragment {
     }
 
     public interface DialogListener {
-        void onDeleted(Boolean isDeleted);
+        void onDeleted(Boolean isDeleted, int pos);
     }
 }

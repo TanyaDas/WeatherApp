@@ -17,7 +17,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 
 import java.util.ArrayList;
 
-public class UserListActivity extends AppCompatActivity {
+public class UserListActivity extends AppCompatActivity implements DeleteUserFragment.DialogListener {
     Context context;
     MaterialToolbar materialToolbar;
     TextView pageTitle;
@@ -51,7 +51,10 @@ public class UserListActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
+
 
     private void loadUsers() {
         userModal = databaseHelper.readAllUsers();
@@ -63,13 +66,43 @@ public class UserListActivity extends AppCompatActivity {
             recyclerView.setVisibility(View.VISIBLE);
             lottieAnimationView.setVisibility(View.GONE);
         }
+
         adapter = new UserAdapter(userModal, context, new UserAdapter.OnItemClickListener() {
+
             @Override
             public void onItemClick(int pos, UserModal modal, View view) {
-                Toast.makeText(context, modal.getFirstName(), Toast.LENGTH_SHORT);
+                switch (view.getId()) {
+                    case R.id.cardUser:
+
+                        Intent intent = new Intent(context, TodayWeatherActivity.class);
+                        startActivity(intent);
+
+                        break;
+                }
+
             }
         });
         recyclerView.setAdapter(adapter);
+       /* new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                // This method is called when we swipe our item to the left direction.
+                // On the below lines, we are getting the item at a particular position.
+
+                DeleteUserFragment dialogFragment = new DeleteUserFragment();
+                Bundle args = new Bundle();
+                args.putInt("adapterPosition", viewHolder.getAdapterPosition());
+                dialogFragment.setArguments(args);
+                dialogFragment.show(getSupportFragmentManager(), "dialogFragment");
+
+            }
+        }).attachToRecyclerView(recyclerView);*/
+
     }
 
     public void init() {
@@ -85,5 +118,18 @@ public class UserListActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
+    }
+
+    @Override
+    public void onDeleted(Boolean isDeleted, int position) {
+        if (isDeleted) {
+            // this method is called when item is swiped below line is to remove item from our array list.
+            userModal.remove(position);
+            // below line is to notify our item is removed from adapter.
+            adapter.notifyItemRemoved(position);
+            Toast.makeText(context, "User Deleted", Toast.LENGTH_SHORT).show();
+        } else {
+            recreate();
+        }
     }
 }
