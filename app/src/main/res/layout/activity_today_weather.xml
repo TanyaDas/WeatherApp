@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnSecondary"
+    tools:context=".TodayWeatherActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/page_title_txt"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/weather_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <TextView
+        android:id="@+id/temp_txt"
+        style="@style/weather_txt"
+        android:layout_marginTop="24dp"
+        android:text="Temp :-"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/weatherTxt"
+        style="@style/weather_txt"
+        android:layout_marginTop="16dp"
+        android:text="Weather :-"
+        app:layout_constraintEnd_toEndOf="@+id/temp_txt"
+        app:layout_constraintStart_toStartOf="@+id/temp_txt"
+        app:layout_constraintTop_toBottomOf="@+id/temp_txt" />
+
+    <TextView
+        android:id="@+id/weatherDetailsTxt"
+        style="@style/weather_txt"
+        android:layout_marginTop="16dp"
+        android:text="Weather Details :-"
+        app:layout_constraintEnd_toEndOf="@+id/temp_txt"
+        app:layout_constraintStart_toStartOf="@+id/temp_txt"
+        app:layout_constraintTop_toBottomOf="@+id/weatherTxt" />
+
+    <TextView
+        android:id="@+id/humidityTxt"
+        style="@style/weather_txt"
+        android:layout_marginTop="16dp"
+        android:text="Humidity :-"
+        app:layout_constraintEnd_toEndOf="@+id/temp_txt"
+        app:layout_constraintStart_toStartOf="@+id/temp_txt"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDetailsTxt" />
+
+    <TextView
+        android:id="@+id/windSpeedTxt"
+        style="@style/weather_txt"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Wind Speed :-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/temp_txt"
+        app:layout_constraintStart_toStartOf="@+id/temp_txt"
+        app:layout_constraintTop_toBottomOf="@+id/humidityTxt"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

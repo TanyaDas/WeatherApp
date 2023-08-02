@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="titles_txt">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">@font/alegreya_sc</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="page_title_txt">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="gray_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="para_txt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="button_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="cancel_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="button_main">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">?attr/colorPrimary</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="cancel_cv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">@color/colorGray</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+    <!--- For TextInputEditText !-->
+    <style name="textInputEditText">
+        <item name="android:cursorVisible">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/alata</item>
+    </style>
+    <!--- For Toolbar Back Arrow ImageView -->
+    <style name="back_arrow_toolbar">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="tint">?attr/colorOnPrimary</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/gradient_black_background</item>
+        <item name="android:src">@drawable/ic_round_back_arrow</item>
+    </style>
+
+    <!--- For Toolbar Title  -->
+    <style name="toolbar_title">
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:text">Page Name</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/alata</item>
+    </style>
+
+    <style name="user_profile_img">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="tint">?attr/colorOnPrimary</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/profile_bg_round</item>
+        <item name="android:src">@drawable/baseline_face_24</item>
+    </style>
+
+    <style name="noData_lottie_anim">
+        <item name="lottie_speed">1.5</item>
+        <item name="lottie_loop">true</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">300dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:padding">0dp</item>
+        <item name="lottie_rawRes">@raw/dog</item>
+    </style>
+
+    <style name="weather_txt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+</resources>

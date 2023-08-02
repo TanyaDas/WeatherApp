@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Weather App</string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_para">This app will provide you weather details according to users, please log in with your credentials</string>
+    <string name="login">Login</string>
+    <string name="log_in">Log In</string>
+    <string name="please_enter_your_email_address_and_password_below">Please enter your Email Address and Password below</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="no_data_found">Oops! Seems like users are not added yet.\n Add User from + icon from top right corner</string>
+    <string name="add_user_details">Add User Details</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_user">Add User</string>
+    <string name="full_name">Full Name</string>
+    <string name="weather_data">Weather Data</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete">Delete</string>
+    <string name="fieldEmptyError">Field can not be empty</string>
+    <string name="invalidEmailError">Enter valid Email Address</string>
+    <string name="passwordTooShortError">Password of 6 character is required\n</string>
+    <string name="get_started">Get Started</string>
 </resources>
